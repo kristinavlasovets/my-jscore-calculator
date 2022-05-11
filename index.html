@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+
+</head>
+<body>
+
+
+    <!-- // Написать калькулятор.
+// Визуально оформлять его можете как хотите, но только чтобы было понятно, куда нажимать
+// 1-  Обязательными являются все функции, что есть на картинке. Остальное - опять же на ваше усмотрение. Можете сделать даже инженерный калькулятор.
+
+// 2 - Поле для ввода должно быть заблокировано от прямого пользовательского ввода (readonly).
+// 3 -  Ввод должен осуществляться путём нажатия на кнопки калькулятора (обязательно) или же клавиши клавиатуры (опционально). Числа выводим с точностью до 8 знака после запятой включительно. По 9 знаку округляем и всё ненужное обрезаем.
+
+// 4- Как именно реализовывать (через отображение всех составляющих операции, через отображение только последнего введённого значения, ещё как-то) - неважно. 
+// Главное, чтобы соблюдался обычный флоу любого калькулятора. Ввод числа, выбор операции, ввод ещё одного числа, выбор новой операции или же вывод результата и т.д.
+
+// Будьте внимательны с обработкой ошибок. Уверяю вас, что там будет много уязвимых мест для их появления:)
+
+
+// Проверять буду вручную, посему очень хотелось бы не прилагать излишних усилий для запуска вашего "детища". Хотелось бы видеть ОДИН .html документ (как правило это index.html) и сколь угодно много .js файлов. Чтобы при запуске html-документа я сразу же мог работать с вашим калькулятором. Поэтому делаем его в отдельном репозитории и буду ждать ссылочку на него(не на ПР, все должно быть уже вмержено/закомитано самостоятельно) до нашего финального занятия, поэтому не спешите и проявите внимание и бдительность к различным тест кейсам:) -->
+    
+<div class="container">
+    <div class="calculator">
+        <div class="output">
+            <div data-previous-operand class="previous-operand"></div>
+            <div data-current-operand class="current-operand"></div>
+        </div>
+        <button data-all-clear class="action">AC</button>
+        <button data-delete class="action">del</button>
+        <button data-operation class="action">%</button>
+        <button data-operation class="action">÷</button>
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-operation class="action">x</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-operation class="action">-</button>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-operation class="action">+</button>
+        <button data-number>.</button>
+        <button data-number>0</button>
+        <button data-equals class="equal">=</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

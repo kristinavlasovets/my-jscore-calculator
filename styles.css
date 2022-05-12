@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Varela&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Varela&display=swap");
 
 * {
   margin: 0;
@@ -15,6 +15,7 @@
   justify-content: center;
   align-items: center;
   background-color: #ebe3d5;
+  background: no-repeat left 5% url(/my-jscore-calculator/calculator.png);
 }
 
 .calculator {
@@ -60,9 +61,8 @@ button {
 }
 
 button:hover {
-    cursor: pointer;
-  }
-  
+  cursor: pointer;
+}
 
 button:active {
   box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.2);
@@ -77,14 +77,17 @@ button:active {
 
 .action {
   color: #ffa050;
-  font-family: 'Varela', sans-serif;
+  font-family: "Varela", sans-serif;
   box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.2);
   background-color: #484849;
   border-radius: 50%;
 }
 
 .action:hover {
-    box-shadow: 0 0 5px 1px #ffa050;
-    transform: scale(1.1);
-    transition: 0.2s linear;
+  box-shadow: 0 0 5px 1px #ffa050;
+}
+
+.equal:hover {
+  transform: scale(1.1);
+  transition: 0.2s linear;
 }

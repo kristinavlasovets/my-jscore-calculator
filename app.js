@@ -53,7 +53,7 @@ class Calculator {
         break;
 
       case "%":
-        calculation = ((current / previous)*100).toFixed(2);
+        calculation = ((current / previous) * 100).toFixed(2);
         break;
 
       default:
@@ -102,10 +102,6 @@ const calculator = new Calculator(
   previousOperandTextElement,
   currentOperandTextElement
 );
-
-// document.addEventListener('keydown', event => {
-//     if ((event.key).match(/[0-9]%\/*\-+\(\)=]|Backspace|Enter/)) calculate(event.key)
-// })
 
 numberButtons.forEach((button) => {
   button.addEventListener("click", () => {

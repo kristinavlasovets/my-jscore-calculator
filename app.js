@@ -12,7 +12,7 @@ class Calculator {
   }
 
   delete() {
-      this.currentOperand = this.currentOperand.toString().slice(0, -1)
+    this.currentOperand = this.currentOperand.toString().slice(0, -1);
   }
 
   appendNumber(number) {
@@ -36,43 +36,52 @@ class Calculator {
     const current = parseFloat(this.currentOperand);
     if (isNaN(previous) || isNaN(current)) return;
     switch (this.operation) {
-        case "+":
+      case "+":
         calculation = previous + current;
         break;
-        
-        case "-":
+
+      case "-":
         calculation = previous - current;
         break;
 
-        case "x":
+      case "x":
         calculation = previous * current;
         break;
 
-        case "÷":
+      case "÷":
         calculation = previous / current;
         break;
 
-        default:
-            return
+      case "%":
+        calculation = ((current / previous)*100).toFixed(2);
+        break;
+
+      default:
+        return;
     }
-    this.currentOperand = calculation
-    this.operation = undefined
-    this.previousOperand = ''
+    this.currentOperand = calculation.toString().slice(0, 10);
+    this.operation = undefined;
+    this.previousOperand = "";
   }
 
   getDisplayNumber(number) {
-    const stringNumber = number.toString()
+    if (number.length > 9) {
+      return number.slice(0, 10);
+    } else {
+      return number;
+    }
   }
 
   updateDisplay() {
-    this.currentOperandTextElement.innerText = this.currentOperand
-    
-
+    this.currentOperandTextElement.innerText = this.getDisplayNumber(
+      this.currentOperand
+    );
     if (this.operation != null) {
-        this.previousOperandTextElement.innerText = 
-        `${this.previousOperand} ${this.operation}`
+      this.previousOperandTextElement.innerText = `${this.getDisplayNumber(
+        this.previousOperand
+      )} ${this.operation}`;
     } else {
-        this.previousOperandTextElement.innerText = ''
+      this.previousOperandTextElement.innerText = "";
     }
   }
 }
